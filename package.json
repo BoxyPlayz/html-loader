@@ -1,0 +1,15 @@
+{
+  "name": "html-component-loader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "Boxy",
+  "license": "ISC",
+  "description": ""
+}
