@@ -22,4 +22,4 @@ const updateIncludes = () => {
   }
 };
 
-export default updateIncludes
+export default updateIncludes;
