@@ -1,15 +1,13 @@
 {
-  "name": "html-component-loader",
-  "version": "1.0.0",
+  "name": "components-for-html",
+  "version": "1.0.1",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "."
+    "url": "https://github.com/BoxyPlayz/html-loader"
   },
   "author": "Boxy",
   "license": "ISC",
-  "description": ""
+  "description": "Html Loader Element"
 }
