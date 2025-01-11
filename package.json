@@ -1,13 +1,21 @@
 {
   "name": "components-for-html",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/BoxyPlayz/html-loader"
   },
   "author": "Boxy",
   "license": "ISC",
-  "description": "Html Loader Element"
+  "description": "Html Loader Element",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.3.11",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "type": "module"
 }
