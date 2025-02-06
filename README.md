@@ -1,9 +1,19 @@
-Base functionality at [https://cdn.jsdelivr.net/npm/components-for-html/index.min.js](https://cdn.jsdelivr.net/npm/components-for-html/index.min.js)
+Base functionality at [https://www.unpkg.com/components-for-html@1.1.1/index.min.js](https://www.unpkg.com/components-for-html@1.1.1/index.min.js)
 
-Coming soon: Attributes
-
-Create a new **include** element with the "url" attribute set to an html page
+To link a page with no arguments, simply use a new **include** element with the "url" attribute set to a webpage
 
 ```
 <include url="header.html"></include>
 ```
+
+If you need arguments, use them in the args attribute with JSON and use the keys with a * in front
+
+```
+<include url="header.html" args="{ 'page' : 'home'}"
+```
+
+```
+<header> The page is: *page </header>
+```
+
+You can see examples in the `example` directory

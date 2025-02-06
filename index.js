@@ -17,11 +17,21 @@ const updateIncludes = async () => {
     return data;
   };
 
-  const promises = Array.from(allInclude).map(async (x) => {
-    const location = x.getAttribute("location");
+  const promises = Array.from(allInclude).map(async (element) => {
+    const location = element.getAttribute("location");
+    const args = JSON.parse(element.getAttribute("args") || "{}");
     try {
-      const data = await fetchContent(location);
-      x.innerHTML = data;
+      let data = await fetchContent(location);
+      for (const key in args) {
+        data = data.replaceAll(`*${key}`, args[key]);
+      }
+      element.innerHTML = data;
+      const scripts = element.querySelectorAll("script");
+      scripts.forEach((script) => {
+        const newScript = document.createElement("script");
+        newScript.textContent = script.textContent;
+        document.head.appendChild(newScript).parentNode.removeChild(newScript);
+      });
     } catch (error) {
       console.error("Error fetching data:", error);
     }
